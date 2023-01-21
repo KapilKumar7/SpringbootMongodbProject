@@ -2,6 +2,7 @@ package com.example.SpringMongoProjectDemo.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -20,6 +21,9 @@ public class Student {
    private Department department;
 
    private List<Subject> subjects;
+   @Transient
+   private double percentage;
+
 
 
 
